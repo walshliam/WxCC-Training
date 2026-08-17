@@ -1,28 +1,81 @@
-<!-- Webex AI Agent -->
-<div
-    id="divicw"
-    data-bind="861F251C-C8C1-49B5-8E42-CA0F2CE14EDF"
-    data-org=""
-    data-guid="181c4f86-ea60-483e-a2a4-334a734c8845">
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNS AI Agent Test</title>
 
-<script>
-(function () {
-    var widgetContainer = document.getElementById("divicw");
-    var script = document.createElement("script");
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
 
-    script.src =
-        "https://chat-widget.prodca1.ciscoccservice.com/js/imichatinit.js?t=" +
-        new Date().toISOString();
+        h1 {
+            color: #005073;
+        }
 
-    widgetContainer.insertAdjacentElement("afterend", script);
+        .notice {
+            background: #f5f5f5;
+            border-left: 4px solid #005073;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
 
-    script.addEventListener("load", function () {
-        console.log("Webex AI Agent loaded successfully");
-    });
+    <h1>CNS AI Agent Test Page</h1>
 
-    script.addEventListener("error", function () {
-        console.error("Failed to load Webex AI Agent");
-    });
-})();
-</script>
+    <p>
+        Welcome to the CNS AI Agent proof-of-concept site.
+    </p>
+
+    <div class="notice">
+        Click the chat icon in the lower-right corner to start a conversation with the AI Agent.
+    </div>
+
+    <!-- Webex AI Agent -->
+    <div
+        id="divicw"
+        data-bind="85A39907-3F9E-46BA-AF02-E158D718464E"
+        data-org=""
+        data-guid="5ac729bf-a97e-487b-9439-ff7bf205991f">
+    </div>
+
+    <script>
+    (function () {
+        try {
+            var e = document.getElementById("divicw");
+            var t = document.createElement("script");
+
+            t.src =
+                "https://chat-widget.prodca1.ciscoccservice.com/js/imichatinit.js?t=" +
+                new Date().toISOString();
+
+            e.insertAdjacentElement("afterend", t);
+
+            t.addEventListener("load", function () {
+                console.log(
+                    new Date().toISOString(),
+                    "Livechat script loaded successfully!"
+                );
+            });
+
+            t.addEventListener("error", function () {
+                console.log(
+                    new Date().toISOString(),
+                    "Error loading Livechat script"
+                );
+            });
+        } catch (err) {
+            console.error(err);
+        }
+    })();
+    </script>
+
+</body>
+</html>
