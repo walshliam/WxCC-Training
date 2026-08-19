@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Assistant</title>
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#divicw {
+    position: fixed;
+    inset: 0;
+}
+</style>
+</head>
+<body>
+
+<div id="divicw"
+     data-bind="85A39907-3F9E-46BA-AF02-E158D718464E"
+     data-org=""
+     data-guid="5ac729bf-a97e-487b-9439-ff7bf205991f">
+</div>
+
+<script>
+var i = {
+    t: function() {
+        try {
+            var e = document.getElementById("divicw");
+            var t = document.createElement("script");
+
+            t.src = "https://chat-widget.prodca1.ciscoccservice.com/js/imichatinit.js?t="
+                  + new Date().toISOString();
+
+            document.body.appendChild(t);
+
+            t.addEventListener("load", function() {
+                console.log("Chat loaded");
+
+                setTimeout(function () {
+
+                    /* Click launcher automatically */
+                    const launcher =
+                        document.querySelector(".imi-chat-launcher") ||
+                        document.querySelector("[aria-label*='Chat']") ||
+                        document.querySelector(".chat-launcher");
+
+                    if (launcher) {
+                        launcher.click();
+                    }
+
+                }, 2000);
+
+            });
+
+        } catch (e) {
+            console.error(e);
+        }
+    }
+};
+
+i.t();
+</script>
+
+</body>
+</html>
