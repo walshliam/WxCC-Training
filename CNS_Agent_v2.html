@@ -57,6 +57,38 @@ html, body {
 
 })();
 </script>
+<style>
+#imi-chatbutton {
+    opacity: 0 !important;
+}
 
+#chatwindow {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    max-height: none !important;
+    z-index: 999999 !important;
+}
+</style>
+
+<script>
+window.addEventListener("load", function () {
+
+    setTimeout(function () {
+
+        var launcher = document.getElementById("imi-chatbutton");
+
+        if (launcher) {
+            console.log("Clicking launcher");
+            launcher.click();
+        }
+
+    }, 3000);
+
+});
+</script>
 </body>
 </html>
